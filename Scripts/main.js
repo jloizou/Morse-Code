@@ -96,16 +96,16 @@ const RevMorseObj = { ".-" : "a" ,
 const displayRev = document.getElementById("dispmorse")
 displayRev.innerHTML = [];
 
-const inputVal = document.getElementById('ipt')
+const inputValMorse = document.getElementById('iptmorse')
 
-const button = document.getElementById("btn")
+const buttonMorse = document.getElementById("btnmorse")
 
 //button event listener:
-button.addEventListener('click', () => { 
-    let splitInputVal = inputVal.value.split("");
+buttonMorse.addEventListener('click', () => { 
+    let splitInputVal = inputValMorse.value.split("");
     console.log(splitInputVal)
     splitInputVal.forEach(letter => {
-        let morseVal = MorseObj[letter]
+        let morseVal = RevMorseObj[letter]
         display.innerHTML += morseVal
         })
     });

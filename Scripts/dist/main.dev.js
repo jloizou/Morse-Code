@@ -84,4 +84,18 @@ var RevMorseObj = {
   "-.--": "y",
   "--..": "z",
   ".......": " "
-};
+}; //make the h1 innerhtml equal to an empty array 
+
+var displayRev = document.getElementById("dispmorse");
+displayRev.innerHTML = [];
+var inputValMorse = document.getElementById('iptmorse');
+var buttonMorse = document.getElementById("btnmorse"); //button event listener:
+
+buttonMorse.addEventListener('click', function () {
+  var splitInputVal = inputValMorse.value.split("");
+  console.log(splitInputVal);
+  splitInputVal.forEach(function (letter) {
+    var morseVal = RevMorseObj[letter];
+    display.innerHTML += morseVal;
+  });
+});
